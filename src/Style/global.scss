@@ -1,0 +1,34 @@
+$bg_color: #F1F1F1;
+$text_color: #404040;
+$text_color_black: #111111;
+
+
+
+$sm_screen: 322px;
+$md_screen: 768px;
+$lg_screen: 991px;
+$xlg_screen: 1400px;
+
+@mixin sm {
+    @media (max-width: #{$sm_screen}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$sm_screen}) and (max-width: #{$md_screen}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$md_screen}) and (max-width: #{$lg_screen}) {
+        @content;
+    }
+}
+
+@mixin xlg {
+    @media (min-width: #{$lg_screen}) and (max-width: #{$xlg_screen}) {
+        @content;
+    }
+}
